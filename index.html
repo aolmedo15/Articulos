@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <link rel="stylesheet" href="estilo.css">
+        <title>Document</title>
+        <script>
+            document.write("<center>")
+            document.write("<h1> Calculo de descuento en articulos </h1>")
+            document.write("</center>")
+        articulo = prompt("Nombre del articulo")
+        cantidad = prompt("Cantidad de articulos")
+        precio = prompt("Precio del articulo")
+        
+        subtotal = cantidad * precio
+        
+        total = subtotal
+
+        document.write("<center>")
+        document.write("<table class=table>")
+            document.write("<tr class=tr1>")
+                document.write("<th>")
+                    document.write("ARTICULO")
+                document.write("</th>")
+                document.write("<th>")
+                    document.write("CANTIDAD")
+                document.write("</th>")
+                document.write("<th>")
+                    document.write("PRECIO")
+                document.write("</th>")
+                document.write("<th>")
+                    document.write("SUBTOTAL")
+                document.write("</th>")
+                document.write("<th>")
+                    document.write("DESCUENTO")
+                document.write("</th>")
+                document.write("<th>")
+                    document.write("TOTAL")
+                document.write("</th>")
+            document.write("</tr>")
+            document.write("<tr align=center class=tr2>")
+                document.write("<td>")
+                    document.write(articulo)
+                document.write("</td>")
+                document.write("<td>")
+                    document.write(cantidad)
+                document.write("</td>")
+                document.write("<td>")
+                    document.write("$"+precio)
+                document.write("</td>")
+                document.write("<td>")
+                    document.write("$"+subtotal)
+                    document.write("</td>")
+                    if(cantidad >= 5)
+                    {
+                        desc = subtotal * 0.25
+                        total = subtotal - desc
+                        document.write("<td>")
+                            document.write("$"+desc)
+                        document.write("</td>")
+                        document.write("<td>")
+                            document.write("$"+total)
+                        document.write("</td>")
+                    }
+                    else
+                    {
+                        document.write("<td>")
+                            document.write("$0")
+                        document.write("</td>")
+                        document.write("<td>")
+                            document.write("$"+total)
+                        document.write("</td>")
+                    }
+            document.write("</tr>")
+        document.write("</table>")
+
+    </script>
+    </head>
+    <body>
+
+    </body>
+</html>
